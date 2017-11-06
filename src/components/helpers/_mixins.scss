@@ -1,0 +1,21 @@
+@mixin placeholder() {
+  &::-webkit-input-placeholder {@content;}
+  &::-moz-placeholder {@content;}
+  &:-moz-placeholder {@content;}
+  &:-ms-input-placeholder {@content;}
+}
+
+@mixin font-mixin ($style, $main-path, $family, $map){
+  $dir-name: $family + '/'; // Генерируем название директории, в которой находится шрифт
+  @each $weight, $path in $map{
+    @font-face {
+      font-family: $family;
+      src: url('#{$main-path + $dir-name + $style + $path}.eot');
+      src: url('#{$main-path + $dir-name + $style + $path}.eot?#iefix') format('embedded-opentype'),
+      url('#{$main-path + $dir-name + $style + $path}.woff') format('woff'),
+      url('#{$main-path + $dir-name + $style + $path}.ttf')  format('truetype');
+      font-style: $style;
+      font-weight: $weight;
+    }
+  }
+}

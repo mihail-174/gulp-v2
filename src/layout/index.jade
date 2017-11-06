@@ -1,0 +1,17 @@
+extends /layout/layout-default.jade
+
+block head
+	- var pageTitle = 'Главная';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block body
+	// обертка контента
+	.wrapper
+		include ../components/header/header
+		include ../components/breadcrumbs/breadcrumbs
+		include ../components/promo/promo
+		include ../components/webform/webform
+		div контент
+		include ../components/footer/footer
+	// КОНЕЦ: обертка контента

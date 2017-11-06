@@ -1,0 +1,75 @@
+body {}
+body, div, table, tr, td, h1, h2, h3, li {
+  position: relative
+}
+body {
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 400;
+  color: #4d4d4d;
+  line-height: 22px;
+  min-width: 970px;
+}
+a {
+  color: #0072bb;
+  text-decoration: none;
+  border-bottom: 1px solid #cce3f1;
+  outline: none;
+  &:hover {
+    color: #009ee2;
+    text-decoration: none;
+    border-color: transparent;
+  }
+  &:focus {
+    text-decoration: none;
+    outline: none;
+    border-color: transparent;
+  }
+}
+p {
+  margin: 0 0 16px;
+}
+ul,
+ol {
+  li {
+    list-style: none;
+    &:before {
+      content: '\2022';
+      position: absolute;
+      top: 0;
+      left: -10px;
+    }
+  }
+}
+h1 {}
+h2 {}
+h3 {}
+table {
+  width: 100%;
+  border: none;
+  thead {
+    th, td {}
+  }
+  tbody {
+    border: none;
+  }
+  tr.odd, tr.even {
+    background-color: transparent;
+  }
+  td, th {
+    padding: 0 14px 0;
+    line-height: 36px;
+    border: none;
+  }
+}
+table.nostyle {
+  border-width: inherit;
+  tr {
+    background-color: transparent;
+    th, td {
+      border-width: 1px;
+      padding: 0;
+      line-height: inherit !important;
+    }
+  }
+}
