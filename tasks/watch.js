@@ -7,7 +7,7 @@ var browserSync = require('browser-sync').create();
 gulp.task('watch', () => {
   global.isWatching = true;
   watch(['src/{components,layout}/**/*.jade'], () => runSequence('template'));
-  // watch('src/**/*.scss', () => {
-  //   runSequence('style');
-  // });
+  watch('src/**/*.scss', () => {
+    runSequence('style');
+  });
 });
