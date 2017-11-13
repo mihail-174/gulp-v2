@@ -15,7 +15,7 @@ const BLOCKS_DIR = path.join(__dirname, 'src/components');
 // default content for files in new block
 const fileSources = {
   jade: `.{blockName} Содержимое блока`,
-  scss: `@import '../helpers/helpers';\n\n.{blockName} {}`,
+  scss: `@import '../helpers/_helpers';\n\n.{blockName} {}`,
   js: `(function ($){\nif (typeof Drupal !== 'undefined') {\nDrupal.behaviors.{blockName} = {\nattach: function(context, settings) {\ninit();\n}\n};\n} else {\ninit();\n}\nfunction init() {\n// Ваш код\n}\n})(jQuery);`
 };
 
