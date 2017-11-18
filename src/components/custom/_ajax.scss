@@ -9,7 +9,7 @@
     -webkit-border-radius: 0;
     border-radius: 0;
     opacity: 1;
-    background: $bg_overlay_ajax;
+    background: $overlayBackgroundColor;
     position: fixed !important;
     top: 0;
     left: 0;
@@ -69,7 +69,7 @@
   .ajax-progress-throbber {
     width: 100%;
     height: 100%;
-    background-color: $bg_overlay_ajax;
+    background-color: $overlayBackgroundColor;
     position: fixed;
     top: 0;
     left: 0;

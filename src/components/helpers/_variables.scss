@@ -9,4 +9,5 @@ $sistemTabsBackgroundColor: #be0115;
 $sistemTabsBackgroundColorHover: #99122d;
 $sistemTabsBackgroundColorActive: #99122d;
 
-$bg_overlay_ajax: rgba(0, 0, 0, 0.5); // задный фон модального окна а также загрузчика аякс
+/* Задний фон для модальных окон */
+$overlayBackgroundColor: rgba(0, 0, 0, 0.5);
