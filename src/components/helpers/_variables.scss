@@ -5,8 +5,8 @@ $drupal: 8;
 $adminMenuBackgroundColorSelectedLi: red;
 
 // Системные вкладки администрирования
-$bg_system_tabs_1: #be0115; // основной фон вкладок
-$bg_system_tabs_2: #99122d; // активная вкладка и выделение
+$sistemTabsBackgroundColor: #be0115;
+$sistemTabsBackgroundColorHover: #99122d;
+$sistemTabsBackgroundColorActive: #99122d;
 
 $bg_overlay_ajax: rgba(0, 0, 0, 0.5); // задный фон модального окна а также загрузчика аякс
-
