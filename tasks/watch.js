@@ -10,4 +10,7 @@ gulp.task('watch', () => {
   watch('src/**/*.scss', () => {
     runSequence('style');
   });
+  watch('src/**/*.js', () => {
+    runSequence('js');
+  });
 });

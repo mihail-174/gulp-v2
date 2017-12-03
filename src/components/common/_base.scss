@@ -10,6 +10,16 @@ body {
   line-height: 22px;
   min-width: 970px;
 }
+.clear {
+  clear: both;
+}
+hr {
+  height: 1px;
+  background-color: #ededee;
+  border: none;
+  width: 100%;
+  margin: 46px 0;
+}
 a {
   color: #0072bb;
   text-decoration: none;
@@ -26,6 +36,18 @@ a {
     border-color: transparent;
   }
 }
+h1 {
+  font-size: 36px;
+  margin: 32px 0 35px;
+}
+h2 {
+  font-size: 26px;
+  margin: 43px 0 19px;
+}
+h3 {
+  font-size: 16px;
+  margin: 20px 0 11px;
+}
 p {
   margin: 0 0 16px;
 }
@@ -41,12 +63,14 @@ ol {
     }
   }
 }
-h1 {}
-h2 {}
-h3 {}
+img {
+  max-width: 100%;
+  height: auto;
+}
 table {
   width: 100%;
   border: none;
+  margin: 25px 0;
   thead {
     th, td {}
   }

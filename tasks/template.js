@@ -21,7 +21,7 @@ gulp.task('template', () => (
   .pipe(gulpIf(global.isWatching, inheritance({
     basedir: 'src'
   })))
-  .pipe(filter(file => /src[\\\/]layout/.test(file.path) && !/src[\\\/]layout[\\\/]layout-default/.test(file.path)))
+  .pipe(filter(file => /src[\\\/]layout/.test(file.path)))
   .pipe(jade({
     basedir: 'src'
   }))
@@ -39,10 +39,10 @@ gulp.task('template', () => (
   .pipe(rename({
     dirname: '.'
   }))
-  .pipe(gulp.dest('src'))
   .pipe(gulpIf(process.env.NODE_ENV === 'production', useref()))
-  .pipe(gulpIf(process.env.NODE_ENV === 'production', gulp.dest('dist')))
-  .pipe(gulpIf(process.env.NODE_ENV === 'developer', gulp.dest('src')))
+  .pipe(gulp.dest('dist'))
+  // .pipe(gulpIf(process.env.NODE_ENV === 'production', gulp.dest('dist')))
+  // .pipe(gulpIf(process.env.NODE_ENV === 'developer', gulp.dest('src')))
 ));
 
 gulp.task('template:lint', () =>

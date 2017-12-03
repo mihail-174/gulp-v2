@@ -1,0 +1,107 @@
+@import '../helpers/_helpers';
+
+$selectFxPlaceholderPadding: 5px 30px 6px 10px;
+$selectFxPlaceholderIcoTop: 50%;
+$selectFxPlaceholderIcoRight: 10px;
+
+$selectFxBorder: 1px solid #ededee;
+$selectFxFontSize: 13px;
+$selectFxTransition: 0.3s;
+
+$selectFxOptionsPaddingLiSpan: 5px 10px;
+
+.cs-select {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-align: left;
+  background: #fff;
+  z-index: 100;
+  width: 221px;
+  max-width: 500px;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  user-select: none;
+  font-size: $selectFxFontSize;
+  line-height: 20px;
+  color: #4d4d4d;
+  select {
+    display: none;
+  }
+}
+
+.cs-placeholder {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding: $selectFxPlaceholderPadding;
+  overflow: hidden;
+  border: $selectFxBorder;
+  &::after {
+    content: '';
+    @include sprite($arrow-down);
+    position: absolute;
+    top: $selectFxPlaceholderIcoTop;
+    right: $selectFxPlaceholderIcoRight;
+    transform: translateY(-50%);
+    transition: all $selectFxTransition;
+  }
+}
+
+.cs-options {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  visibility: hidden;
+  border: $selectFxBorder;
+  box-sizing: border-box;
+  margin-top: -1px;
+  background-color: #fff;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      transform: scale3d(1,0,1);
+      background: #fff;
+    }
+    li {
+      opacity: 0;
+      margin: 0;
+      &:before {
+        display: none;
+      }
+      span {
+        display: block;
+        cursor: pointer;
+        padding: $selectFxOptionsPaddingLiSpan;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.cs-active {
+  .cs-placeholder {
+    &::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+  .cs-options {
+    visibility: visible;
+    pointer-events: auto;
+    ul {
+      li {
+        opacity: 1;
+      }
+    }
+  }
+}

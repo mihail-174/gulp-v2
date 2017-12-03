@@ -5,13 +5,12 @@ block head
 	- var pageDescription = '';
 	- var pageKeywords = '';
 
+block variables
+	- var bodyFront = 'front';
+
 block body
 	// обертка контента
 	.wrapper
-		include ../components/header/header
-		include ../components/breadcrumbs/breadcrumbs
-		include ../components/promo/promo
-		include ../components/webform/webform
+		// include ../components/breadcrumbs/breadcrumbs
 		div контент
-		include ../components/footer/footer
 	// КОНЕЦ: обертка контента

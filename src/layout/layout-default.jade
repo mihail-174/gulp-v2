@@ -1,3 +1,5 @@
+block variables
+
 doctype html
 html(lang='ru')
 
@@ -12,20 +14,16 @@ html(lang='ru')
 		link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/normalize-css/normalize.css")
 		link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.css")
 		link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/lightgallery/dist/css/lightgallery.min.css")
+		link(rel="stylesheet", href="css/selectfx.css")
 
 		link(rel="stylesheet", href="css/common.css")
 		link(rel="stylesheet", href="css/custom.css")
-
-		link(rel="stylesheet", href="css/header.css")
-		link(rel="stylesheet", href="css/promo.css")
-		link(rel="stylesheet", href="css/breadcrumbs.css")
-		link(rel="stylesheet", href="css/footer.css")
-		link(rel="stylesheet", href="css/webform.css")
 		link(rel="stylesheet", href="css/block.css")
-		link(rel="stylesheet", href="css/lightgallery.css")
+		link(rel="stylesheet", href="css/breadcrumbs.css")
 		link(rel="stylesheet", href="css/webform.css")
+		link(rel="stylesheet", href="css/lightgallery.css")
 
-	body
+	body(class=bodyFront)
 		// build:remove
 		include ../components/linking-pages/linking-pages.jade
 		// endbuild
@@ -35,7 +33,14 @@ html(lang='ru')
 		script(src='https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js')
 		script(src='https://cdn.jsdelivr.net/npm/lightgallery/dist/js/lightgallery-all.min.js')
 		script(src='https://cdn.jsdelivr.net/npm/inputmask/dist/min/jquery.inputmask.bundle.min.js')
-		script(src='components/promo/promo.js')
-		script(src='components/lightgallery/lightgallery.js')
-		script(src='components/webform/webform.js')
+		script(src='js/selectFx.js')
+		script(src='libs/classie.js')
+
+		//- для блока поделиться
+		script(src='//yastatic.net/es5-shims/0.0.2/es5-shims.min.js')
+		script(src='//yastatic.net/share2/share.js')
+
+		script(src='js/lightgallery.js')
+		script(src='js/webform.js')
+		script(src='js/select.js')
 		script(src='js/theme.js')

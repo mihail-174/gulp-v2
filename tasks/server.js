@@ -4,16 +4,15 @@ import htmlInjector from 'bs-html-injector';
 
 gulp.task('server', function() {
   browserSync.use(htmlInjector, {
-    files: 'src/*.html',
+    files: 'dist/*.html',
   })
   browserSync.init({
-    // files: ['src/*.html', 'src/**/*.js'],
     server: {
-      baseDir: 'src',
+      baseDir: ['dist', 'src']
     },
     open: false,
     injectChanges: true,
-    tunnel: false,
+    tunnel: true,
     notify: true
   });
 });

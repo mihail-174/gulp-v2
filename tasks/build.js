@@ -7,7 +7,8 @@ gulp.task('build', () => (
     'clean',
     'template',
     'style',
-    'copy',
+    'js',
+    'fonts',
     'imagemin'
   )
 ));

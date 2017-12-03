@@ -32,5 +32,7 @@ gulp.task('style', () => {
       dirname: '.'
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('src/css'))
+    .pipe(gulp.dest('dist/css'))
+  // .pipe(gulp.dest('src/components'))
+  // .pipe(gulpIf(process.env.NODE_ENV === 'production', gulp.dest('dist/components'), gulp.dest('src/components')))
 });

@@ -9,17 +9,17 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites;
-$arrows-select-name: 'arrows-select';
-$arrows-select-x: 0px;
-$arrows-select-y: 32px;
-$arrows-select-offset-x: 0px;
-$arrows-select-offset-y: -32px;
-$arrows-select-width: 6px;
-$arrows-select-height: 4px;
-$arrows-select-total-width: 64px;
-$arrows-select-total-height: 36px;
-$arrows-select-image: '../img/sprite.png';
-$arrows-select: (0px, 32px, 0px, -32px, 6px, 4px, 64px, 36px, '../img/sprite.png', 'arrows-select', );
+$arrow-down-name: 'arrow-down';
+$arrow-down-x: 0px;
+$arrow-down-y: 32px;
+$arrow-down-offset-x: 0px;
+$arrow-down-offset-y: -32px;
+$arrow-down-width: 6px;
+$arrow-down-height: 4px;
+$arrow-down-total-width: 64px;
+$arrow-down-total-height: 36px;
+$arrow-down-image: '../img/sprite.png';
+$arrow-down: (0px, 32px, 0px, -32px, 6px, 4px, 64px, 36px, '../img/sprite.png', 'arrow-down', );
 $facebook-name: 'facebook';
 $facebook-x: 0px;
 $facebook-y: 0px;
@@ -45,7 +45,7 @@ $vkontakte: (32px, 0px, -32px, 0px, 32px, 32px, 64px, 36px, '../img/sprite.png',
 $spritesheet-width: 64px;
 $spritesheet-height: 36px;
 $spritesheet-image: '../img/sprite.png';
-$spritesheet-sprites: ($arrows-select, $facebook, $vkontakte, );
+$spritesheet-sprites: ($arrow-down, $facebook, $vkontakte, );
 $spritesheet: (64px, 36px, '../img/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables
