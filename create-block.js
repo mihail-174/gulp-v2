@@ -14,7 +14,7 @@ const BLOCKS_DIR = path.join(__dirname, 'src/components');
 
 // default content for files in new block
 const fileSources = {
-  jade: `.{blockName} Содержимое блока`,
+  jade: `// {blockName}\n.{blockName} Содержимое блока\n// КОНЕЦ: {blockName}`,
   scss: `@import '../helpers/_helpers';\n\n.{blockName} {}`
 };
 
