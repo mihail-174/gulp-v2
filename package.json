@@ -9,7 +9,10 @@
     "clean": "gulp clean",
     "build": "cross-env NODE_ENV=production gulp build"
   },
-  "author": "mihail-174",
+  "author": {
+    "name": "mihail-174",
+    "url": "https://github.com/mihail-174"
+  },
   "license": "ISC",
   "dependencies": {
     "babel": "^6.23.0",
