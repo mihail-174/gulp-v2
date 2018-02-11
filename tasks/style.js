@@ -11,7 +11,7 @@ import cached from 'gulp-cached';
 import filter from 'gulp-filter';
 
 gulp.task('style', () => {
-  gulp.src('src/components/**/*.scss')
+  gulp.src(['src/components/**/*.scss', 'src/libs/**/*.css'])
     .pipe(plumber({
       errorHandler: errorHandler(`Ошибка в \'Стилях\' task`)
     }))
@@ -19,7 +19,7 @@ gulp.task('style', () => {
     .pipe(gulpIf(global.isWatching, sassInheritance({
       dir: 'src'
     })))
-    .pipe(filter(file => /src[\\\/]components/.test(file.path)))
+    .pipe(filter(file => /src[\\\/]components/.test(file.path) || /src[\\\/]libs/.test(file.path) ))
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed'

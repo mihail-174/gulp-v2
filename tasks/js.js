@@ -18,7 +18,7 @@ gulp.task('js', () => {
       dir: 'src/'
     })))
     .pipe(filter(file => /src[\\\/]components/.test(file.path) || /src[\\\/]js/.test(file.path) || /src[\\\/]libs/.test(file.path)))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(rename({
       dirname: '.'
     }))

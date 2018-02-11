@@ -1,9 +1,0 @@
-input[type='text'],
-input[type='password'],
-input[type='email'],
-textarea {
-  @include placeholder() { opacity: 1; }
-  &:focus {
-    @include placeholder() { opacity: 0; }
-  }
-}
