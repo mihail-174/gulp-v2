@@ -1,0 +1,17 @@
+mixin style(href)
+	link(rel="stylesheet", href=href)
+
+mixin script(src)
+	script(src=src)
+
+mixin btnLink(href, style, classes)
+	- var style = (typeof style === 'underfined') ? "default" : style
+	- var classes = (typeof classes === 'underfined') ? "default" : classes
+	a(href=href, class=['btn', style, size, classes])
+		block
+
+mixin btn(style, classes)
+	- var style = (typeof style === 'underfined') ? "default" : style
+	- var classes = (typeof classes === 'underfined') ? "default" : classes
+	button(class=['btn', style, classes])
+		block
