@@ -1,16 +1,26 @@
 // перелинковка страниц для верстки
 .html-fast-links-on-page
-  ul
-    li
-      a(href="/index.html") Главная
-    li
-      a(href="/page2.html") Страница 1
-    li
-      a(href="/page3.html") Страница 2
+	ul
+		li
+			a(href="/index.html") Главная
+		li
+			a(href="/page2.html") Страница 1
+		li
+			a(href="/page3.html") Страница 2
 
 style.
-  .html-fast-links-on-page { background-color: lightgray; border-bottom: 1px solid gray; display: inline-block; width: 100%; text-align: center; }
-  .html-fast-links-on-page ul { list-style: none; display: inline-block; padding: 0; }
-  .html-fast-links-on-page ul li { margin: 0 5px; padding: 0; float: left; }
-  .html-fast-links-on-page ul li:before { display: none; }
+	.html-fast-links-on-page { background-color: lightgray; border-bottom: 1px solid gray; display: inline-block; width: 100%; text-align: center; }
+	.html-fast-links-on-page ul { list-style: none; display: inline-block; padding: 0; }
+	.html-fast-links-on-page ul li { margin: 0 5px; padding: 0; float: left; }
+	.html-fast-links-on-page ul li:before { display: none; }
+	.html-fast-links-on-page a { transition: all 0.2s; padding: 1px 5px; border: none; } 
+	.html-fast-links-on-page a.active,
+	.html-fast-links-on-page a:hover { color: red; }
+
+script.
+	[].slice.call(document.querySelectorAll('.html-fast-links-on-page a')).forEach(function(el) {
+		if ( el.getAttribute('href') == location.pathname ) {
+			el.classList.add('active');
+		}
+	});
 // КОНЕЦ: перелинковка страниц для верстки
