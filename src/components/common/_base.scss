@@ -1,4 +1,6 @@
-body {}
+* {
+  box-sizing: border-box;
+}
 body, div, table, tr, td, h1, h2, h3, li {
   position: relative
 }
@@ -49,10 +51,11 @@ h3 {
   margin: 20px 0 11px;
 }
 p {
-  margin: 0 0 16px;
+  margin: 0 0 15px;
 }
 ul,
 ol {
+  margin: 0 0 15px;
   li {
     list-style: none;
     &:before {
@@ -67,7 +70,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-.table-wrapper {overflow: auto;}
 table {
   width: 100%;
   border: none;
@@ -88,11 +90,14 @@ table {
   }
 }
 table.nostyle {
-  border-width: inherit;
+  border: none;
+  thead {
+    background-color: transparent;
+  }
   tr {
     background-color: transparent;
     th, td {
-      border-width: 1px;
+      border: none;
       padding: 0;
       line-height: inherit !important;
     }

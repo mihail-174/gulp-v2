@@ -1,2 +1,10 @@
-.container {}
+.container {
+  margin: 0 auto;
+  width: 1170px;
+  @include max-screen(1199px) {width: 970px;}
+  @include max-screen(991px) {width: 750px;}
+}
 .noscroll {}
+.table-wrapper {overflow: auto;}
+a.lightgallery {border-bottom: none;}
+ul.slick-dots li button, .slick-slide, .slick-arrow {outline: none;}
