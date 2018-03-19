@@ -1,4 +1,19 @@
-// шрифты
+@mixin font-mixin ($style, $main-path, $family, $map){
+  $dir-name: $family + '/'; // Генерируем название директории, в которой находится шрифт
+  @each $weight, $path in $map{
+    @font-face {
+      font-family: $family;
+      src: url('#{$main-path + $dir-name + $style + $path}.eot');
+      src: url('#{$main-path + $dir-name + $style + $path}.eot?#iefix') format('embedded-opentype'),
+      url('#{$main-path + $dir-name + $style + $path}.woff2') format('woff2'),
+      url('#{$main-path + $dir-name + $style + $path}.woff') format('woff'),
+      url('#{$main-path + $dir-name + $style + $path}.ttf')  format('truetype'),
+      url('#{$main-path + $dir-name + $style + $path}.svg##{$family}')  format('svg');
+      font-style: $style;
+      font-weight: $weight;
+    }
+  }
+}
 
 // Создаем переменную, с указанием пути до корневой папки.
 // Путь указывается относительно файла css.
