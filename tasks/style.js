@@ -9,6 +9,8 @@ import rename from 'gulp-rename';
 import sassInheritance from 'gulp-sass-inheritance';
 import cached from 'gulp-cached';
 import filter from 'gulp-filter';
+import concat from 'gulp-concat';
+
 
 gulp.task('style', () => {
   gulp.src(['src/components/**/*.scss', 'src/libs/**/*.css'])
@@ -33,6 +35,11 @@ gulp.task('style', () => {
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css'))
-  // .pipe(gulp.dest('src/components'))
-  // .pipe(gulpIf(process.env.NODE_ENV === 'production', gulp.dest('dist/components'), gulp.dest('src/components')))
+
+  gulp.src('src/components/**/*.scss')
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }))
+    .pipe(concat('styles.css'))
+    .pipe(gulp.dest('dist/css'))
 });
