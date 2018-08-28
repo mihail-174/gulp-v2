@@ -12,7 +12,7 @@ gulp.task('server', function() {
     },
     open: false,
     injectChanges: true,
-    tunnel: true,
+    tunnel: false,
     notify: true
   });
 });
