@@ -1,4 +1,9 @@
-* {
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
   box-sizing: border-box;
 }
 body, div, table, tr, td, h1, h2, h3, li {
@@ -11,6 +16,10 @@ body {
   color: #4d4d4d;
   line-height: 22px;
   min-width: 970px;
+}
+blockquote,
+q {
+  quotes: none;
 }
 .clear {
   clear: both;
