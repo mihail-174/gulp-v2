@@ -1,19 +1,35 @@
 // перелинковка страниц для верстки
 .html-fast-links-on-page
-	ul
-		li
-			a(href="/index.html") Главная
-		li
-			a(href="/page2.html") Страница 1
-		li
-			a(href="/page3.html") Страница 2
-
+	label(for='checkbox-html-fast-links-on-page')
+		span.burger
+	input(type='checkbox')#checkbox-html-fast-links-on-page
+	.panel
+		div
+			ul
+				li
+					a(href="/index.html") Главная
+				li
+					a(href="/page1.html") Страница 1
+				li
+					a(href="/page2.html") Страница 2
+				
 style.
-	.html-fast-links-on-page { background-color: lightgray; border-bottom: 1px solid gray; display: inline-block; width: 100%; text-align: center; }
-	.html-fast-links-on-page ul { list-style: none; display: inline-block; padding: 0; }
-	.html-fast-links-on-page ul li { margin: 0 5px; padding: 0; float: left; }
+	.html-fast-links-on-page { position: fixed; z-index: 999; top: 0; left: 0; background-color: transparent; }
+	.html-fast-links-on-page input { display: none; }
+	.html-fast-links-on-page label { color: red; height: 30px; width: 30px; padding: 3px; cursor: pointer; display: flex; align-items: center; position: absolute; z-index: 1000; }
+	.html-fast-links-on-page label span.burger { height: 4px; width: 30px; background-color: red; display: inline-block; position: relative; }
+	.html-fast-links-on-page label span.burger:before,
+	.html-fast-links-on-page label span.burger:after { content: ''; position: absolute; right: 0; left: 0; background-color: red; height: 4px; width: 100%; margin: auto; transition: all 0.3s; }
+	.html-fast-links-on-page .burger::before { top: -8px; }
+	.html-fast-links-on-page .burger::after { bottom: -8px; }
+	.html-fast-links-on-page .panel { display: none; height: 100%; position: fixed; top: 0; left: 0; z-index: 999; padding-top: 30px; max-width: 290px;}
+	.html-fast-links-on-page .panel > div { height: 100%; overflow: auto; }
+	.html-fast-links-on-page #checkbox-html-fast-links-on-page:checked + .panel { display: block; }
+	.html-fast-links-on-page ul { list-style: none; display: inline-block; margin: 0; background-color: lightgray; padding: 15px; }
+	.html-fast-links-on-page ul li { margin: 0 0 10px; padding: 0; }
 	.html-fast-links-on-page ul li:before { display: none; }
-	.html-fast-links-on-page a { transition: all 0.2s; padding: 1px 5px; border: none; } 
+	.html-fast-links-on-page ul li:last-child { margin-bottom: 0; }
+	.html-fast-links-on-page a { transition: all 0.2s; border: none; line-height: 1; }
 	.html-fast-links-on-page a.active,
 	.html-fast-links-on-page a:hover { color: red; }
 
