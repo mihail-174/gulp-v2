@@ -6,6 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=developer gulp --debug",
     "create-block": "babel-node create-block.js",
+	"create-js": "babel-node create-js.js",
     "clean": "gulp clean",
     "build": "cross-env NODE_ENV=production gulp build"
   },
