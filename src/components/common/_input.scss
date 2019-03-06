@@ -1,0 +1,30 @@
+input[type='text'],
+input[type='password'],
+input[type='email'],
+textarea {
+    outline: none;
+    font-size: 14px;
+    padding: 9px 15px 11px;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 7px;
+    // border: 1px solid $color2;
+    background-color: transparent;
+    // color: $color2;
+    transition: all 0.3s ease-in-out;
+    // @include placeholder() { opacity: 1; color: $color2; }
+    &:hover {
+        // border-color: $color1;
+    }
+    &:focus {
+        outline: none;
+        // border-color: $color1;
+        @include placeholder() { opacity: 0; }
+    }
+}
+textarea {
+    resize: none;
+}
+input[type='submit'] {
+    outline: none;
+}
