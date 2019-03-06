@@ -1,42 +1,53 @@
 // перелинковка страниц для верстки
-.html-fast-links-on-page
-	label(for='checkbox-html-fast-links-on-page')
-		span.burger
-	input(type='checkbox')#checkbox-html-fast-links-on-page
-	.panel
-		div
-			ul
-				li
-					a(href="/index.html") Главная
-				li
-					a(href="/page1.html") Страница 1
-				li
-					a(href="/page2.html") Страница 2
-				
++b.gulp-pages
+    label(for='checkbox-gulp-pages')
+        span.name PAGES:
+        span.burger
+    input(type='checkbox')#checkbox-gulp-pages
+    +e.inner
+        +e.pages
+            ul
+                li
+                    a(href="/index.html") главная
+
 style.
-	.html-fast-links-on-page { position: fixed; z-index: 999; top: 0; left: 0; background-color: transparent; }
-	.html-fast-links-on-page input { display: none; }
-	.html-fast-links-on-page label { color: red; height: 30px; width: 30px; padding: 3px; cursor: pointer; display: flex; align-items: center; position: absolute; z-index: 1000; }
-	.html-fast-links-on-page label span.burger { height: 4px; width: 30px; background-color: red; display: inline-block; position: relative; }
-	.html-fast-links-on-page label span.burger:before,
-	.html-fast-links-on-page label span.burger:after { content: ''; position: absolute; right: 0; left: 0; background-color: red; height: 4px; width: 100%; margin: auto; transition: all 0.3s; }
-	.html-fast-links-on-page .burger::before { top: -8px; }
-	.html-fast-links-on-page .burger::after { bottom: -8px; }
-	.html-fast-links-on-page .panel { display: none; height: 100%; position: fixed; top: 0; left: 0; z-index: 999; padding-top: 30px; max-width: 290px;}
-	.html-fast-links-on-page .panel > div { height: 100%; overflow: auto; }
-	.html-fast-links-on-page #checkbox-html-fast-links-on-page:checked + .panel { display: block; }
-	.html-fast-links-on-page ul { list-style: none; display: inline-block; margin: 0; background-color: lightgray; padding: 15px; }
-	.html-fast-links-on-page ul li { margin: 0 0 10px; padding: 0; }
-	.html-fast-links-on-page ul li:before { display: none; }
-	.html-fast-links-on-page ul li:last-child { margin-bottom: 0; }
-	.html-fast-links-on-page a { transition: all 0.2s; border: none; line-height: 1; }
-	.html-fast-links-on-page a.active,
-	.html-fast-links-on-page a:hover { color: red; }
+    .gulp-pages { position: fixed; z-index: 999; top: 0; left: 0; background-color: lightgray; }
+    .gulp-pages input { display: none; }
+    .gulp-pages label { font-size: 18px; color: black; padding: 10px; cursor: pointer; display: flex; align-items: center; }
+    .gulp-pages label span.name { margin-right: 10px; line-height: 1; }
+    .gulp-pages label span.burger { height: 2px; width: 24px; margin-top: 1px; background-color: black; display: inline-block; position: relative; }
+    .gulp-pages label span.burger:before,
+    .gulp-pages label span.burger:after { content: ''; position: absolute; right: 0; left: 0; background-color: black; height: 2px; width: 100%; margin: auto; transition: all 0.25s ease-in-out; }
+    .gulp-pages .burger::before { top: -6px; }
+    .gulp-pages .burger::after { bottom: -6px; }
+    .gulp-pages__inner {
+        display: none;
+        position: absolute;
+        top: 34px;
+        left: 0;
+        z-index: 999;
+        background-color: lightgray;
+        padding: 15px;
+    }
+    .gulp-pages__pages {
+        display: flex;
+    }
+    .gulp-pages #checkbox-gulp-pages:checked + .gulp-pages__inner { display: flex; }
+    .gulp-pages ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .gulp-pages ul li { margin: 0 0 10px; padding: 0; }
+    .gulp-pages ul li:before { display: none; }
+    .gulp-pages a { transition: all 0.2s; border: none; line-height: 1; white-space: nowrap; color: inherit; }
+    .gulp-pages a.active { color: red; font-weight: 700; }
+    .gulp-pages form { margin: 0 0 20px 0; }
 
 script.
-	[].slice.call(document.querySelectorAll('.html-fast-links-on-page a')).forEach(function(el) {
-		if ( el.getAttribute('href') == location.pathname ) {
-			el.classList.add('active');
-		}
-	});
+    [].slice.call(document.querySelectorAll('.gulp-pages a')).forEach(function(el) {
+        if ( el.getAttribute('href') == location.pathname ) {
+            el.classList.add('active');
+        }
+    });
 // КОНЕЦ: перелинковка страниц для верстки
