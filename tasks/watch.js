@@ -13,4 +13,7 @@ gulp.task('watch', () => {
   watch('src/**/*.js', () => {
     runSequence('js');
   });
+  watch('src/img/**/*.*', () => {
+    runSequence('image');
+  });
 });
