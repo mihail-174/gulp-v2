@@ -1,12 +1,12 @@
 {
   "name": "myProject",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=developer gulp",
     "create-block": "babel-node create-block.js",
-	"create-js": "babel-node create-js.js",
+    "create-js": "babel-node create-js.js",
     "clean": "gulp clean",
     "build": "cross-env NODE_ENV=production gulp build"
   },
@@ -38,6 +38,7 @@
     "gulp-jade-inheritance": "^0.5.5",
     "gulp-js-inheritance": "^0.0.2",
     "gulp-jsbeautifier": "^2.1.1",
+    "gulp-newer": "^1.4.0",
     "gulp-plumber": "^1.1.0",
     "gulp-plumber-error-handler": "^1.0.0",
     "gulp-pug-linter": "^0.5.1",

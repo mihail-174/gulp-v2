@@ -9,6 +9,6 @@ gulp.task('build', () => (
     'style',
     'js',
     'fonts',
-    'imagemin'
+    'image'
   )
 ));
