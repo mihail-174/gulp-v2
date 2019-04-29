@@ -35,7 +35,7 @@ input[type='checkbox']:not(checked) + label:before {
   width: 20px;
   height: 20px;
   background-color: white;
-  border: 1px solid $color3;
+  // border: 1px solid $color3;
   box-sizing: border-box;
 }
 /* Меняем фон чекбокса, когда он включен. */
@@ -48,5 +48,5 @@ input[type='checkbox']:checked + label:after {
   position: absolute;
   top: 5px;
   left: 5px;
-  @include sprite($checkbox);
+  // @include sprite($checkbox);
 }
