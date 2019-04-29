@@ -9,7 +9,7 @@
 .btn_style-1 {
     font-weight: 700;
     line-height: 23px;
-    font-size: $normaPlus;
+    // font-size: $normaPlus;
     color: white;
     border: 1px solid white;
     padding: 17px 39px 18px;
@@ -19,16 +19,16 @@
     }
 }
 .btn_style-2 {
-    background-color: $color1;
-    border: 1px solid $color1;
+    // background-color: $color1;
+    // border: 1px solid $color1;
     color: white;
-    font-size: $normaPlus;
+    // font-size: $normaPlus;
     font-weight: 700;
     line-height: 23px;
     padding: 18px 18px 17px;
     &:hover {
         color: white;
-        border: 1px solid $color1;
+        // border: 1px solid $color1;
     }
 }
 // .btn_arrow-right {
