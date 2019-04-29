@@ -6,7 +6,8 @@ gulp.task('default', () => (
     [
       'template',
       'style',
-      'js'
+      'js',
+      'fonts'
     ],
     'server',
     'watch'
