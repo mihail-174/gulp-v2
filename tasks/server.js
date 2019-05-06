@@ -8,7 +8,7 @@ gulp.task('server', function() {
   })
   browserSync.init({
     server: {
-      baseDir: ['dist', 'src']
+      baseDir: ['dist', 'src/fonts']
     },
     open: false,
     injectChanges: true,
