@@ -4493,6 +4493,17 @@ gulp-watch@^5.0.1:
     vinyl "^2.1.0"
     vinyl-file "^2.0.0"
 
+gulp-zip@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/gulp-zip/-/gulp-zip-4.2.0.tgz#e25e738c41ad0795ad853d1d8aeb1744d2a4ca82"
+  integrity sha512-I+697f6jf+PncdTrqfuwoauxgnLG1yHRg3vlmvDgmJuEnlEHy4meBktJ/oHgfyg4tp6X25wuZqUOraVeVg97wQ==
+  dependencies:
+    get-stream "^3.0.0"
+    plugin-error "^0.1.2"
+    through2 "^2.0.1"
+    vinyl "^2.1.0"
+    yazl "^2.1.0"
+
 gulp.spritesmith@^6.5.1:
   version "6.9.0"
   resolved "https://registry.yarnpkg.com/gulp.spritesmith/-/gulp.spritesmith-6.9.0.tgz#28f81ee3a425c7f88c6dde56ba920d995f9d0419"
@@ -9849,6 +9860,13 @@ yauzl@^2.2.1, yauzl@^2.4.2:
   dependencies:
     buffer-crc32 "~0.2.3"
     fd-slicer "~1.1.0"
+
+yazl@^2.1.0:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/yazl/-/yazl-2.5.1.tgz#a3d65d3dd659a5b0937850e8609f22fffa2b5c35"
+  integrity sha512-phENi2PLiHnHb6QBVot+dJnaAZ0xosj7p3fWl+znIjBDlnMI2PsZCJZ306BPTFOaHf5qdDEI8x5qFrSOBN5vrw==
+  dependencies:
+    buffer-crc32 "~0.2.3"
 
 yeast@0.1.2:
   version "0.1.2"
