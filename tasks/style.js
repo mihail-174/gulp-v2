@@ -10,7 +10,9 @@ import sassInheritance from 'gulp-sass-inheritance';
 import cached from 'gulp-cached';
 import filter from 'gulp-filter';
 import concat from 'gulp-concat';
-
+import sortCSSmq from 'sort-css-media-queries';
+import mqpacker from "css-mqpacker";
+import postcss from "gulp-postcss";
 
 gulp.task('style', () => {
   gulp.src(['src/components/**/*.scss', 'src/libs/**/*.css'])
@@ -30,6 +32,11 @@ gulp.task('style', () => {
       browsers: ['last 200 versions'],
       cascade: true
     }))
+    .pipe(postcss([
+        mqpacker({
+            sort: sortCSSmq
+        })
+    ]))
     .pipe(rename({
       dirname: '.'
     }))
@@ -40,6 +47,11 @@ gulp.task('style', () => {
     .pipe(sass({
       outputStyle: 'compressed'
     }))
+    .pipe(postcss([
+        mqpacker({
+            sort: sortCSSmq
+        })
+    ]))
     .pipe(concat('styles.css'))
     .pipe(gulp.dest('dist/css'))
 });
