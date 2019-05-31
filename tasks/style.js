@@ -13,6 +13,7 @@ import concat from 'gulp-concat';
 import sortCSSmq from 'sort-css-media-queries';
 import mqpacker from "css-mqpacker";
 import postcss from "gulp-postcss";
+import debug from "gulp-debug";
 
 gulp.task('style', () => {
   gulp.src(['src/components/**/*.scss', 'src/libs/**/*.css'])
@@ -39,6 +40,9 @@ gulp.task('style', () => {
     ]))
     .pipe(rename({
       dirname: '.'
+    }))
+    .pipe(debug({
+        "title": "CSS files"
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css'))
