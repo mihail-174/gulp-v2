@@ -10,8 +10,8 @@ body, div, table, tr, td, h1, h2, h3, li {
   position: relative
 }
 body {
-  font-family: Arial;
-  font-size: 16px;
+  font-family: $font;
+  font-size: $norma;
   font-weight: 400;
   color: #4d4d4d;
   line-height: 22px;
