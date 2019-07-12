@@ -11,7 +11,7 @@ body, div, table, tr, td, h1, h2, h3, li {
 }
 body {
   font-family: $font;
-  font-size: $norma;
+  font-size: map-get($fontSize, norma);
   font-weight: 400;
   color: #4d4d4d;
   line-height: 22px;
@@ -48,15 +48,15 @@ a {
   }
 }
 h1 {
-  font-size: 36px;
+  font-size: map-get($fontSize, h1);
   margin: 32px 0 35px;
 }
 h2 {
-  font-size: 26px;
+  font-size: map-get($fontSize, h2);
   margin: 43px 0 19px;
 }
 h3 {
-  font-size: 16px;
+  font-size: map-get($fontSize, h3);
   margin: 20px 0 11px;
 }
 p {

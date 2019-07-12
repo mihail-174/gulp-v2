@@ -9,7 +9,7 @@
 .btn_style-1 {
     font-weight: 700;
     line-height: 23px;
-    // font-size: $normaPlus;
+    // font-size: map-get($fontSize, normaPlus);
     color: white;
     border: 1px solid white;
     padding: 17px 39px 18px;
@@ -22,7 +22,7 @@
     // background-color: $color1;
     // border: 1px solid $color1;
     color: white;
-    // font-size: $normaPlus;
+    // font-size: map-get($fontSize, normaPlus);
     font-weight: 700;
     line-height: 23px;
     padding: 18px 18px 17px;

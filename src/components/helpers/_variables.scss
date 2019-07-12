@@ -3,7 +3,20 @@ $overlayBackgroundColor: rgba(0, 0, 0, 0.5);
 
 $font: Roboto, arial;
 
-$normaMinus: 12px;
-$norma: 14px;
-$normaPlus: 16px;
-$normaPlusExtra: 18px;
+$fontSize: (
+    h1:                30px,
+    h2:                22px,
+    h3:                16px,
+    norma:             14px,    // основной размер шрифта
+    normaMinus:        14px,    // уменьшенный размер шрифта
+    normaPlus:         16px,    // увеличенный размер шрифта
+    priceNone:         15px,    // нет цены (цена по запросу)
+    priceNoneBig:      20px,    // нет цены (цена по запросу) в карточке единицы (техники, товара)
+    price:             22px,    // цена в списке техники
+    priceBig:          31px,    // цена в карточке единицы (техники, товара)
+    privacyPolicy:     12px,    // текст политики конфидициальности
+    presence:          15px,    // в наличии/под заказ
+);
+$fontSizeMax1199: ();
+$fontSizeMax991: ();
+$fontSizeMax767: ();
