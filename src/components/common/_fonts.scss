@@ -2,6 +2,7 @@
   $dir-name: $family + '/'; // Генерируем название директории, в которой находится шрифт
   @each $weight, $path in $map{
     @font-face {
+      font-display: swap;
       font-family: $family;
       src: url('#{$main-path + $dir-name + $style + $path}.eot');
       src: url('#{$main-path + $dir-name + $style + $path}.eot?#iefix') format('embedded-opentype'),
