@@ -2,7 +2,6 @@ import gulp from 'gulp';
 import gulpIf from 'gulp-if';
 import plumber from 'gulp-plumber';
 import jade from 'gulp-jade';
-import pugLinter from 'gulp-pug-linter';
 import prettify from 'gulp-jsbeautifier';
 import inheritance from 'gulp-jade-inheritance';
 import cached from 'gulp-cached';
@@ -44,9 +43,3 @@ gulp.task('template', () => (
   // .pipe(gulpIf(process.env.NODE_ENV === 'production', gulp.dest('dist')))
   // .pipe(gulpIf(process.env.NODE_ENV === 'developer', gulp.dest('src')))
 ));
-
-gulp.task('template:lint', () =>
-  gulp.src('src/**/*.jade')
-  .pipe(pugLinter())
-  .pipe(pugLinter.reporter('fail'))
-);
