@@ -3,7 +3,7 @@ input[type='password'],
 input[type='email'],
 textarea {
     outline: none;
-    font-size: 14px;
+    font-size: map-get($fontSize, input);
     padding: 9px 15px 11px;
     width: 100%;
     box-shadow: none;

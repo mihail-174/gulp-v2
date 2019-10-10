@@ -16,7 +16,26 @@ $fontSize: (
     priceBig:          31px,    // цена в карточке единицы (техники, товара)
     privacyPolicy:     12px,    // текст политики конфидициальности
     presence:          15px,    // в наличии/под заказ
+    input:             14px,    // текстовые поля
 );
-$fontSizeMax1199: ();
-$fontSizeMax991: ();
-$fontSizeMax767: ();
+
+$lineheight: (
+    h1:                34px,
+    h2:                26px,
+    h3:                24px,
+);
+
+$padding: 70px 0; // внутренний отступ секции/блока.
+
+$margin: (
+    h1: 0,
+    h2: 40px 0 20px,
+    h3: 20px 0 15px,
+    block: 70px, // основной отступ снизу блока.
+    block2: 50px, // дополнительный отступ снизу блока, уменьшенный.
+    p: 0 0 15px,
+    ul: 0 0 15px,
+    ol: 0 0 15px,
+    table: 0 0 15px,
+    hr: 40px 0
+);

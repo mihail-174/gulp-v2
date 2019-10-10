@@ -16,6 +16,7 @@ body {
   color: #4d4d4d;
   line-height: 22px;
   min-width: 970px;
+  margin: 0;
 }
 blockquote,
 q {
@@ -29,7 +30,7 @@ hr {
   background-color: #ededee;
   border: none;
   width: 100%;
-  margin: 46px 0;
+  margin: map-get($margin, hr);
 }
 a {
   color: #0072bb;
@@ -46,25 +47,30 @@ a {
     outline: none;
     border-color: transparent;
   }
+  &:active {
+    outline: none;
+  }
 }
 h1 {
   font-size: map-get($fontSize, h1);
-  margin: 32px 0 35px;
+  margin: map-get($margin, h1);
+  line-height: map-get($lineheight, h1);
 }
 h2 {
   font-size: map-get($fontSize, h2);
-  margin: 43px 0 19px;
+  margin: map-get($margin, h2);
+  line-height: map-get($lineheight, h2);
 }
 h3 {
   font-size: map-get($fontSize, h3);
-  margin: 20px 0 11px;
+  margin: map-get($margin, h3);
+  line-height: map-get($lineheight, h3);
 }
 p {
-  margin: 0 0 15px;
+  margin: map-get($margin, p);
 }
-ul,
-ol {
-  margin: 0 0 15px;
+ul {
+  margin: map-get($margin, ul);
   li {
     list-style: none;
     &:before {
@@ -75,14 +81,20 @@ ol {
     }
   }
 }
+ol {
+    margin: map-get($margin, ol);
+}
 img {
-  max-width: 100%;
-  height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 table {
   width: 100%;
   border: none;
-  margin: 25px 0;
+  margin: map-get($margin, ol);
+  border-collapse: collapse;
+  border-spacing: 0;
   thead {
     th, td {}
   }
@@ -111,4 +123,7 @@ table.nostyle {
       line-height: inherit !important;
     }
   }
+}
+button {
+    outline: 0;
 }

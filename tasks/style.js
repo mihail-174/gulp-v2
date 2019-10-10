@@ -30,7 +30,7 @@ gulp.task('style', () => {
       outputStyle: 'compressed'
     }))
     .pipe(autoprefixer({
-      browsers: ['last 200 versions'],
+      overrideBrowserslist: ['last 200 versions'],
       cascade: true
     }))
     .pipe(postcss([

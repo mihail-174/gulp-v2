@@ -8,3 +8,13 @@
 .table-wrapper {overflow: auto;}
 a.lightgallery {border-bottom: none;}
 ul.slick-dots li button, .slick-slide, .slick-arrow {outline: none;}
+
+.margin {
+    margin: map-get($margin, block);
+}
+.margin-small {
+    margin: map-get($margin, block2);
+}
+.padding {
+    padding: $padding;
+}
