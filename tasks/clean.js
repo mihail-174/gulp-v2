@@ -1,6 +1,8 @@
-import gulp from 'gulp';
-import del from 'del';
+"use strict";
 
-gulp.task('clean', () => {
-  return del.sync('dist');
+import gulp from "gulp";
+import del from "del";
+
+gulp.task("clean", () => {
+    return del(["dist/*"]);
 });
