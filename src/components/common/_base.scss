@@ -89,6 +89,9 @@ img {
     max-width: 100%;
     height: auto;
 }
+.table-wrapper {
+    overflow: auto;
+}
 table {
   width: 100%;
   border: none;
@@ -123,6 +126,30 @@ table.nostyle {
       line-height: inherit !important;
     }
   }
+}
+.table-mobile {
+    @include max-screen(539px) {
+        tbody,
+        tr,
+        td {
+            display: block !important;
+            width: 100% !important;
+        }
+        td {
+            padding: 10px !important;
+            @include first(1) {
+                padding-bottom: 0 !important;
+                color: #000 !important;
+                font-weight: 700 !important;
+            }
+            br {
+                display: none !important;
+            }
+            ul {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
 }
 button {
     outline: 0;
